@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Galeria miejsc ciekawych</h2>
+    </header>
+
+    <main>
+        <img src="lanzarotte.jpg" alt="galeria">
+    </main> 
+      <section id="lewy">
+          <h3>Przeglądaj zdjęcia</h3>
+          <img src="odin-recipes/lanzarotte.jpg" alt="lanzarotte.jpg" id="a" onclick="klik(this)">
+          <img src="odin-recipes/pekin.jpg" alt="pekin.jpg"  id="b" onclick="klik(this)">
+          <img src="odin-recipes/serengeti.jpg" alt="serengeti.jpg" id="c" onclick="klik(this)">
+          <img src="odin-recipes/wenecja.jpg" alt="wenecja.jpg" id="d" onclick="klik(this)">
+          <img src="odin-recipes/wenecja.jpg" alt="wenecja.jpg" id="e" onclick="klik(this)">
+
+      </section>
+      
+      <section id="prawy">
+            <h3>Obrazy w naszej galerii</h3>
+            <table>
+                <tr>
+                    <td>Europa</td>
+                    <td>Azja</td>
+                    <td>Afryka</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+            </table>
+            <p>Polub nas <img src="icon-off.png" id="ikona" onclick="ikon()"></p>
+            <a href="https://pixabay.com" target="_blank">Odkryj więcej zdjęć</a>
+      </section>
+    
+
+    <footer>
+        Autor:Jakub Pobutkiewicz
+    </footer>
+
+    <script>
+        var zmienna= true;
+        function klik(id){
+            if(zmienna==true){
+                document.getElementById(id.id).style.width = "12.5vh";
+                document.getElementById(id.id).style.height = "9.5vh";
+                zmienna=false;
+                }
+            else{
+
+                document.getElementById(id.id).style.width = "15vh";
+                document.getElementById(id.id).style.height = "15vh";
+                zmienna=true;
+                }
+        }
+
+        var zmienna2 = true;
+        function ikon(){
+            if(zmienna2==true){
+            document.getElementById("ikona").src = "icon-on.png"
+            zmienna2=false;
+            }
+            else{
+            document.getElementById("ikona").src = "icon-off.png"
+            zmienna2=true;
+            }
+        }
+    </script>
+</body>
+</html>
